@@ -8,10 +8,15 @@
 using namespace std;
 
 bool gameOver;
-
-
+// shaxriyor set up void function ///|||??
 void Setup() {
-   
+    gameOver = false;
+    dir = STOP;
+    x = width / 2;
+    y = height / 2;
+    fruitX = rand() % width;
+    fruitY = rand() % height;
+    score = 0;
 }
 /*Student: Sherzod Aslonov;
  This function displays the game on console, it draws game board, player and the current score of the player.
