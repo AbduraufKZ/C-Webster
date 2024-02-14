@@ -15,7 +15,7 @@ int tailX[100], tailY[100];
 int nTail;
 enum eDirection { STOP = 0, LEFT, RIGHT, UP, DOWN };
 eDirection dir;
-// shaxriyor set up void function ///|||??
+//|||||///// shaxriyor set up void function //|||||/|||??
 void Setup() {
     gameOver = false;
     dir = STOP;
