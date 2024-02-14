@@ -6,8 +6,15 @@
 #include <windows.h>
 
 using namespace std;
-
+//toirova muslima 
 bool gameOver;
+const int width = 20;
+const int height = 40;
+int x, y, fruitX, fruitY, score;
+int tailX[100], tailY[100];
+int nTail;
+enum eDirection { STOP = 0, LEFT, RIGHT, UP, DOWN };
+eDirection dir;
 // shaxriyor set up void function ///|||??
 void Setup() {
     gameOver = false;
@@ -19,8 +26,8 @@ void Setup() {
     score = 0;
 }
 /*Student: Sherzod Aslonov;
- This function displays the game on console, it draws game board, player and the current score of the player.
-  */
+ This function displays the game on cnsole, it draws game board, player and the current score of the player.
+  *//
 void Draw() {
     system("cls");
     for (int i = 0; i < width + 2; i++) {
