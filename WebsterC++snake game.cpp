@@ -9,7 +9,7 @@ using namespace std;
 //done bytoirova muslima 
 bool gameOver;
 const int width = 20;
-const int height = 40;
+const int height = 20;
 int x, y, fruitX, fruitY, score;
 int tailX[100], tailY[100];
 int nTail;
@@ -27,17 +27,17 @@ void Setup() {
 }
 /*Student: Sherzod Aslonov;
  This function displays the game on cnsole, it draws game board, player and the current score of the player.
-  *//
+ */
 void Draw() {
     system("cls");
-    for (int i = 0; i < width + 2; i++) {
-        cout << "#";
-        cout << endl;
-    }
+   
+for (int i = 0; i < width + 2; i++)
+    cout << "#";
+cout << endl;
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {
             if (j == 0)
-                cout << "";
+                cout << "||";
             if (i == y && j == x)
                 cout << "O";
             else if (i == fruitY && j == fruitX)
@@ -55,13 +55,13 @@ void Draw() {
             }
 
             if (j == width - 1)
-                cout << "";
+                cout << "||";
         }
         cout << endl;
     }
 
     for (int i = 0; i < width + 2; i++)
-        cout << "-";
+        cout << "#";
     cout << endl;
     cout << "Score:" << score << endl;
 }
@@ -89,7 +89,7 @@ void Input() {
         }
     }
    
-}
+
 /*Student: Aminov Humoyunmirzo
 function that controls the direction of movements */
 void Logic()
@@ -99,7 +99,7 @@ void Logic()
     int prev2X, prev2Y;
     tailX[0] = x;
     tailY[0] = y;
-
+    
     for (int i = 1; i < nTail; i++)
     {
         prev2X = tailX[i];
