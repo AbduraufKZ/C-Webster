@@ -18,7 +18,29 @@ void Draw() {
    
 }
 
+/*Student: Muslima Rizayeva
+function that handles user input to control the game*/
 void Input() {
+        if (_kbhit()) {
+            switch (_getch()) {
+            case 'a':
+                dir = LEFT;
+                break;
+            case 'd':
+                dir = RIGHT;
+                break;
+            case 'w':
+                dir = UP;
+                break;
+            case 's':
+                dir = DOWN;
+                break;
+            case 'x':
+                gameOver = true;
+                break;
+            }
+        }
+    }
    
 }
 /*Student: Aminov Humoyunmirzo
